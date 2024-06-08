@@ -1,6 +1,6 @@
 package itzkiller.skyblockremake.events;
 
-import itzkiller.skyblockremake.utilities.demonsword;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -27,10 +27,17 @@ public class guiListeners implements Listener {
             // Check if the clicked item is not null and is a demon sword
             if (clickedItem != null && clickedItem.getType() == Material.DIAMOND_SWORD &&
                     clickedItem.getItemMeta() != null &&
-                    clickedItem.getItemMeta().getDisplayName().equals("DEMON SLAYER")) {
+                    clickedItem.getItemMeta().getDisplayName().equals(ChatColor.RED+"DEMON SLAYER")) {
                 // Give the player the clicked item
                 player.getInventory().addItem(clickedItem);
-                player.sendMessage("You obtained the Demon Slayer!");
+                player.sendMessage(ChatColor.RED+"You obtained the Demon Slayer!");
+            }
+           else if (clickedItem != null && clickedItem.getType() == Material.DIAMOND_SWORD &&
+                    clickedItem.getItemMeta() != null &&
+                    clickedItem.getItemMeta().getDisplayName().equals(ChatColor.BLUE+"Aspect of the End")) {
+                // Give the player the clicked item
+                player.getInventory().addItem(clickedItem);
+                player.sendMessage(ChatColor.BLUE+"You obtained the Aspect of the End!");
             }
         }
     }

@@ -1,2 +1,4 @@
-package itzkiller.skyblockremake.enums;public class rarity {
+package itzkiller.skyblockremake.enums;
+
+public class rarity {
 }
