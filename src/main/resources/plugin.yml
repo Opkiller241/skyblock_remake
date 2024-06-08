@@ -1,0 +1,4 @@
+name: skyblock remake
+version: '${project.version}'
+main: itzkiller.skyblockremake.main
+api-version: '1.17'
