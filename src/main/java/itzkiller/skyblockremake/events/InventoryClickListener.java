@@ -37,7 +37,14 @@ public class InventoryClickListener implements Listener {
                     clickedItem.getItemMeta().getDisplayName().equals(ChatColor.BLUE+"Aspect of the End")) {
                 // Give the player the clicked item
                 player.getInventory().addItem(clickedItem);
-                player.sendMessage(ChatColor.BLUE+"You obtained the Aspect of the End!");
+                player.sendMessage(ChatColor.BLUE + "You obtained the Aspect of the End!");
+            }
+                else if (clickedItem != null && clickedItem.getType() == Material.ENDER_EYE &&
+                        clickedItem.getItemMeta() != null &&
+                        clickedItem.getItemMeta().getDisplayName().equals(ChatColor.GREEN+"Enchanted Eye Of Ender")) {
+                    // Give the player the clicked item
+                    player.getInventory().addItem(clickedItem);
+                    player.sendMessage(ChatColor.GREEN+"You obtained the Enchanted Eye Of Ender!");
             }
         }
     }

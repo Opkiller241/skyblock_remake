@@ -4,6 +4,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeModifier;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -40,7 +41,7 @@ public class CustomItems {
             lore2.add(" ");
             lore2.add(ChatColor.GOLD+"Ability: Instant Transmission "+ChatColor.YELLOW+"RIGHT CLICK");
             lore2.add(ChatColor.GRAY+"Teleport "+ChatColor.GREEN+"8 Blocks "+ChatColor.GRAY+"ahead of you and");
-            lore2.add(ChatColor.GRAY+"gain "+ChatColor.GREEN+"+50 "+ChatColor.WHITE+"✦Speed "+ChatColor.GRAY+"for "+ChatColor.GREEN+"3 Seconds"+ChatColor.GRAY+".");
+            lore2.add(ChatColor.GRAY+"gain "+ChatColor.GREEN+"+50 "+ChatColor.WHITE+"✦ Speed "+ChatColor.GRAY+"for "+ChatColor.GREEN+"3 Seconds"+ChatColor.GRAY+".");
             lore2.add(ChatColor.DARK_GRAY+"Mana Cost: "+ChatColor.DARK_AQUA+"50");
             lore2.add(" ");
             lore2.add(ChatColor.DARK_GRAY+"This item can be reforged!");
@@ -50,7 +51,21 @@ public class CustomItems {
             item2.setItemMeta(meta2);
         }
 
-        ItemStack[] i =new ItemStack[]{item1,item2};
+        ItemStack item3=new ItemStack(Material.ENDER_EYE);
+        ItemMeta meta3=item3.getItemMeta();
+        if(meta3!=null) {
+            meta3.setDisplayName(ChatColor.GREEN+"Enchanted Eye Of Ender");
+            List<String> lore3=new ArrayList<>();
+            lore3.add(ChatColor.GREEN+"UNCOMMON");
+            meta3.addEnchant(Enchantment.DURABILITY,1,true);
+            meta3.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+            meta3.setLore(lore3);
+            item3.setItemMeta(meta3);
+
+
+        }
+
+        ItemStack[] i =new ItemStack[]{item1,item2,item3};
         return i;
     }
 }
