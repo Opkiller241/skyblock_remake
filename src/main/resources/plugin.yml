@@ -1,8 +1,8 @@
 name: skyblockremake
 version: '${project.version}'
-main: itzkiller.skyblockremake.main
+main: itzkiller.skyblockremake.Skyblock
 commands:
   items:
-    description: Open the custom items GUI
-    usuage: /items
+    description: Open the custom Items GUI
+    usuage: /Items
 api-version: '1.17'
