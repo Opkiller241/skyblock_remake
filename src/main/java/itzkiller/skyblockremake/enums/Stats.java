@@ -1,4 +1,4 @@
 package itzkiller.skyblockremake.enums;
 
-public class stats {
+public class Stats {
 }

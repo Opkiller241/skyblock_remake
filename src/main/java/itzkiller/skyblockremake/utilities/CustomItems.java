@@ -11,10 +11,9 @@ import org.bukkit.inventory.meta.ItemMeta;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Customitems {
-    public static ItemStack[] createitems(){
+public class CustomItems {
 
-
+    public static ItemStack[] createItems(){
         ItemStack item1 = new ItemStack(Material.DIAMOND_SWORD);
         ItemMeta meta1 = item1.getItemMeta();
         if (meta1 != null) {
@@ -51,7 +50,7 @@ public class Customitems {
             item2.setItemMeta(meta2);
         }
 
-        ItemStack[] i=new ItemStack[]{item1,item2};
+        ItemStack[] i =new ItemStack[]{item1,item2};
         return i;
     }
 }

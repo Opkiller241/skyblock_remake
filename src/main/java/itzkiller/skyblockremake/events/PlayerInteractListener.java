@@ -9,10 +9,10 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 
-public class aote implements Listener {
+public class PlayerInteractListener implements Listener {
 
     @EventHandler
-    public void onPlayeruse(PlayerInteractEvent e) {
+    public void onPlayerUse(PlayerInteractEvent e) {
         Player player = e.getPlayer();
         ItemStack item = e.getItem();
         if (item != null && item.hasItemMeta()) {

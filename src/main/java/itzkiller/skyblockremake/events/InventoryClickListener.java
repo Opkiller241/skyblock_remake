@@ -10,7 +10,7 @@ import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
-public class guiListeners implements Listener {
+public class InventoryClickListener implements Listener {
 
     @EventHandler
     public void onInventoryClick(InventoryClickEvent event) {
@@ -22,7 +22,7 @@ public class guiListeners implements Listener {
 
         // Check if the clicked inventory is the custom GUI
         if (clickedInventory.getType() == InventoryType.CHEST) {
-            event.setCancelled(true); // Prevent players from taking items out of the GUI
+            event.setCancelled(true); // Prevent players from taking Items out of the GUI
 
             // Check if the clicked item is not null and is a demon sword
             if (clickedItem != null && clickedItem.getType() == Material.DIAMOND_SWORD &&
